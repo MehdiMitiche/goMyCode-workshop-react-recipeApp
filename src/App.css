@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+* {
+  font-family: "Oswald", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  height: 10vh;
+  background-color: #444a5a;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pageContent {
+  position: relative;
+  top: 10vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container {
+  background-color: #55f1a0;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+.search-bar {
+  width: 50%;
+}
+
+.recipes-container {
+  min-height: 60vh;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 20px;
+  background-color: #f4f9fc;
+}
+.card-container {
+  box-shadow: 3px 10px 15px -3px rgba(153, 153, 153, 1);
+
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  width: 30vw;
+  margin: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-container {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.recipe-infos {
+  display: flex;
+  margin-top: 6px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+}
+.recipe-title {
+  flex: 1;
+  padding-left: 10px;
+}
+.recipe-calories {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  padding-right: 10px;
+}
+hr {
+  width: 100%;
+}
+.ingeredients {
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  color: grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1000px) {
+  .card-container {
+    width: 48vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 800px) {
+  .card-container {
+    width: 80vw;
   }
 }
